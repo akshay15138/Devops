@@ -22,10 +22,10 @@ steps:
     goals: 'package'
 - task: CopyFiles@2
   inputs:
-    Contents: '**/.src'
+    Contents: '**/*.webapp'
     TargetFolder: '$(build.artifactstagingdirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'a'
-    publishLocation: 'C:\Agent\a'
+    ArtifactName: 'warfile'
+    publishLocation: 'Container'
